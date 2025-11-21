@@ -68,3 +68,7 @@ C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Debug\net8.0\refint\LH
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Debug\net8.0\LHPets.pdb
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Debug\net8.0\LHPets.genruntimeconfig.cache
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Debug\net8.0\ref\LHPets.dll
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Debug\net8.0\publish\publish\appsettings.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Debug\net8.0\publish\publish\LHPets.deps.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Debug\net8.0\publish\publish\LHPets.runtimeconfig.json
