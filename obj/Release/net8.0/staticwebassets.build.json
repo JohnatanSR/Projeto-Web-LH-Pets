@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "qQNgPuXzzHGByVGuQWcHtsq7JrSERqslV4sBAdekxbM=",
+  "Source": "LHPets",
+  "BasePath": "_content/LHPets",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LHPets\\wwwroot",
+      "Source": "LHPets",
+      "ContentRoot": "C:\\Users\\Gabrielle Cristine\\Downloads\\LHPets_Prepared\\wwwroot\\",
+      "BasePath": "_content/LHPets",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Gabrielle Cristine\\Downloads\\LHPets_Prepared\\wwwroot\\index.html",
+      "SourceId": "LHPets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gabrielle Cristine\\Downloads\\LHPets_Prepared\\wwwroot\\",
+      "BasePath": "_content/LHPets",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
