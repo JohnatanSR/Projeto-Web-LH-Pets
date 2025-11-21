@@ -6,14 +6,17 @@ using LHPets.Models;
 public class Banco
 {
     private readonly string _connectionString;
+    private List<Cliente> listaClientes; // Lista como atributo
+
     public Banco(string connectionString)
     {
         _connectionString = connectionString;
+        listaClientes = new List<Cliente>();
     }
 
     public async Task<List<Cliente>> GetClientesAsync()
     {
-        var lista = new List<Cliente>();
+        listaClientes = new List<Cliente>();
         using var conn = new SqlConnection(_connectionString);
         await conn.OpenAsync();
 
@@ -30,9 +33,9 @@ public class Banco
             
             // Usando cidade como CPF temporário e email como está, paciente vazio por enquanto
             var c = new Cliente(id, nome, cidade, email, "");
-            lista.Add(c);
+            listaClientes.Add(c);
         }
 
-        return lista;
+        return listaClientes;
     }
 }

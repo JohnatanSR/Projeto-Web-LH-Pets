@@ -3,34 +3,45 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adicionar serviços MVC
-builder.Services.AddControllersWithViews();
-
 // carregar appsettings.json (já é carregado por default)
 var config = builder.Configuration;
 
-// registrar Banco como serviço (injetando connection string) - opcional para futuro
+// registrar Banco como serviço (injetando connection string)
 builder.Services.AddScoped<Banco>(_ => new Banco(config.GetConnectionString("Vendas")));
 
 var app = builder.Build();
 
-// Configurar pipeline HTTP
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
+// Habilitar servir arquivos estáticos (wwwroot/index.html)
+app.UseDefaultFiles(); // procura index.html
 app.UseStaticFiles();
 
-app.UseRouting();
+// rota "/" -> string simples
+app.MapGet("/", () => Results.Text("LH Pets - Protótipo 1"));
 
-app.UseAuthorization();
+// rota "/index" -> redireciona para index.html (que está em wwwroot)
+app.MapGet("/index", (HttpContext ctx) =>
+{
+    ctx.Response.Redirect("/index.html");
+    return Task.CompletedTask;
+});
 
-// Configurar rotas MVC
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+// rota "/listaClientes" -> buscar do banco e retornar HTML simples
+app.MapGet("/listaClientes", async (Banco banco) =>
+{
+    var clientes = await banco.GetClientesAsync();
+
+    // montar HTML simples com a lista
+    var html = "<!doctype html><html><head><meta charset='utf-8'><title>Lista de Clientes</title></head><body>";
+    html += "<h1>Lista de Clientes</h1>";
+    html += "<ul>";
+    foreach (var c in clientes)
+    {
+        html += $"<li>{System.Net.WebUtility.HtmlEncode(c.Nome)} - {System.Net.WebUtility.HtmlEncode(c.Email ?? "")} - {System.Net.WebUtility.HtmlEncode(c.Paciente ?? "")}</li>";
+    }
+    html += "</ul>";
+    html += "</body></html>";
+
+    return Results.Content(html, "text/html");
+});
 
 app.Run();
