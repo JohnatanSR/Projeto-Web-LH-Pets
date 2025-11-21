@@ -1,6 +1,7 @@
 using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using LHPets.Models;
 
 public class Banco
 {
@@ -22,13 +23,13 @@ public class Banco
         using var reader = await cmd.ExecuteReaderAsync();
         while (await reader.ReadAsync())
         {
-            var c = new Cliente
-            {
-                Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                Nome = reader.GetString(reader.GetOrdinal("Nome")),
-                Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? null : reader.GetString(reader.GetOrdinal("Email")),
-                Cidade = reader.IsDBNull(reader.GetOrdinal("Cidade")) ? null : reader.GetString(reader.GetOrdinal("Cidade"))
-            };
+            var id = reader.GetInt32(reader.GetOrdinal("Id"));
+            var nome = reader.GetString(reader.GetOrdinal("Nome"));
+            var email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString(reader.GetOrdinal("Email"));
+            var cidade = reader.IsDBNull(reader.GetOrdinal("Cidade")) ? "" : reader.GetString(reader.GetOrdinal("Cidade"));
+            
+            // Usando cidade como CPF temporário e email como está, paciente vazio por enquanto
+            var c = new Cliente(id, nome, cidade, email, "");
             lista.Add(c);
         }
 

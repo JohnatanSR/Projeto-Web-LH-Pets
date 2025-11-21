@@ -1,5 +1,9 @@
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\LHPets.exe
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\publish\web.config
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\appsettings.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\publish\appsettings.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\publish\LHPets.deps.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\publish\LHPets.runtimeconfig.json
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\LHPets.dll
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\LHPets.deps.json
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\publish\LHPets.runtimeconfig.json

@@ -61,3 +61,10 @@ C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\refint\
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\LHPets.pdb
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\LHPets.genruntimeconfig.cache
 C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\ref\LHPets.dll
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Release\net8.0\publish\web.config
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Release\net8.0\publish\appsettings.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Release\net8.0\publish\LHPets.deps.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\bin\Release\net8.0\publish\LHPets.runtimeconfig.json
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\LHPets.RazorAssemblyInfo.cache
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\LHPets.RazorAssemblyInfo.cs
+C:\Users\Gabrielle Cristine\Downloads\LHPets_Prepared\obj\Release\net8.0\LHPets.sourcelink.json
